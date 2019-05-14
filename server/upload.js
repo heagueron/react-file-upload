@@ -11,7 +11,7 @@ module.exports = function upload(req, res) {
     var form = new IncomingForm()
 
     // Set the directory for placing file uploads in
-    form.uploadDir = "C:/Users/USUARIO/file_up/uploaded";
+    //form.uploadDir = "C:/Users/USUARIO/file_up/uploaded";
 
     // The first callback is called for every file in the form
     form.on('file', (field, file) => { // Emitted whenever a field / file pair has been received
@@ -22,6 +22,7 @@ module.exports = function upload(req, res) {
 
     // The second callback is called when the form is completely parsed
     form.on('end', () => {
+        console.log("File uploaded!")
         res.json()
     }) 
 

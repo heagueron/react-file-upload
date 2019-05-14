@@ -89,3 +89,5 @@ class Dropzone extends Component {
       );
   }
 }
+
+export default Dropzone
